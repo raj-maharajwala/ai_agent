@@ -1,0 +1,237 @@
+/* Custom styling for inline code */
+[data-testid="stChatMessage"] .assistant-title-start code {
+    background-color: #f0f0f0;
+    vertical-align: middle;
+    font-family: monospace;
+    font-size: 0.65em;
+    color: #6f8695;
+    font-weight: 500;
+}
+[data-testid="stChatMessage"] .assistant-title code {
+    background-color: #f0f0f0;
+    vertical-align: middle;
+    font-family: monospace;
+    font-size: 0.65em;
+    color: #6f8695;
+    font-weight: 500;
+}
+[data-testid="stChatMessage"] .assistant-title-start {
+    color: #CC7900;
+    margin-top: -10px;
+}
+[data-testid="stChatMessage"] .cyan-title-start {
+    color: #22808e;
+    margin-top: -10px;
+}
+[data-testid="stChatMessage"] .cyan-title-start code {
+    color: #e83e8c;
+    margin-top: -10px;
+}
+[data-testid="stChatMessage"] .assistant-title {
+    color: #CC7900;
+    margin-top: 0px;
+}
+[data-testid="stChatMessage"] .human-heading {
+    color: #FF9800;
+}
+[data-testid="stChatMessage"] .ai-heading {
+    color: #2196F3;
+}
+[data-testid="stChatMessage"] .tool-heading {
+    color: #FF9800;
+}
+[data-testid="stChatMessage"] .expander-title {
+    color: #673AB7;
+}
+[data-testid="stChatMessage"] .stop-button {
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.stop-button:hover {
+    background-color: #ff0000;
+}
+
+
+[data-testid="stChatMessage"] {
+    max-width: 100%;  /* Use a percentage of the viewport width */
+    width: auto;      /* Let the width be determined by content */
+    margin-left: 4vw;
+    margin-right: 5vw;
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    word-wrap: break-word; /* Legacy support for smaller browsers */
+    overflow: hidden;  /* Hide overflowed text */
+}
+
+.block-container {
+    padding-top: 1.5rem;
+    padding-bottom: 0rem;
+    padding-left: 0.5rem;
+    padding-right: 1.5em;
+}
+.main .block-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0rem 0rem;
+}
+.stApp {
+    margin: 0 auto;
+}
+
+/* For user messages 
+.st-emotion-cache-janbn0 {
+    flex-direction: row-reverse;
+    text-align: right;
+}*/
+.stChatInput textarea, div[data-testid="stChatInput"] textarea {
+    caret-color: #e0e0e0 !important;
+}
+            
+[data-testid="stButton"] button {
+    position: fixed;
+    bottom: 55px;
+    font-size: 35px;
+    height: 38px;
+    width: 38px;
+    margin-right: -62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 5s ease-out;  /* Smooth transitions */
+    background-color: #2a2c2c;
+    z-index: 999;  /* Ensure button stays on top */
+}
+            
+[data-testid="stButton"] button:hover {
+    position: fixed;
+    transition: all 5s ease-out;  /* Smooth transitions */
+    left: 10px;
+    bottom: 30px;
+    background-color: #2a2c2c;
+}
+
+.stChatInput, div[data-testid="stChatInput"] {
+    height: auto !important;
+    min-height: 40px !important;
+    padding: 15px !important;
+    border-radius: 12px !important;
+    background-color: #2a2c2c !important;
+    box-shadow: 0 1px 5px rgba(1,0,0,0.3) !important;
+    margin-top: -20px;
+    margin-bottom: -25px;
+}
+
+[data-testid="stChatInputTextArea"]::placeholder {
+    color: rgba(224, 225, 225, 0.856) !important;
+}
+
+[data-testid="stChatInputFileUploadButton"] svg {
+    fill: #8c9494 !important;
+}
+
+/* Style the inner container - new in 1.42.2 */
+.st-emotion-cache-10nh6ap, div[data-testid="stChatInput"] > div {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    width: 95% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 40px !important;
+    position: relative !important;
+}
+
+.st-emotion-cache-nbth8s {
+    position: absolute !important;
+    left: 10px !important;
+    bottom: 20px !important;
+    z-index: 10 !important;
+    order: 2 !important;
+}
+
+/* Reposition the file upload button container */
+[data-testid="stChatInputFileUploadButton"] {
+    margin-right: 10px !important;
+    border: none !important;
+    position: absolute !important;
+    bottom: -16px !important;
+    z-index: 10 !important;
+    order: 2 !important;
+}
+
+/* Reposition line next 2 file upload button */ 
+.st-emotion-cache-g39xc6  {
+    margin-left: 29px !important;
+    margin-right: 0px !important;
+    border: none !important;
+    position: absolute !important;
+    bottom: -20px !important;
+    background-color: transparent !important;
+    z-index: 10 !important;
+    order: 2 !important;
+    min-height: 40px !important;
+}
+
+/* Style the textarea container */
+.stChatInput [data-baseweb="textarea"] {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    width: 95% !important;
+    max-width: 100% !important;
+    order: 1 !important;
+}
+
+/* Style the actual textarea element */
+[data-testid="stChatInputTextArea"] {
+    min-height: 40px !important;
+    max-height: 100px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 12px !important;
+    padding-left: 35px !important; /* Make room for the attachment button */
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    box-shadow: none !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+}
+
+/* Style the base input container */
+[data-baseweb="base-input"] {
+    border: none !important;
+    width: 100% !important;
+    max-width: 96% !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    min-height: 10px !important;
+    max-height: 100px !important;
+}
+
+/* Style the button container - new in 1.42.2 */
+.st-emotion-cache-sey4o0 {
+    align-self: flex-end !important;
+    margin-top: -30px !important;
+    z-index: 5 !important;
+}
+
+/* Adjust the send button position */
+[data-testid="stChatInputSubmitButton"] {
+    align-self: flex-end !important;
+    margin-bottom: -27px !important;
+    box-shadow: 0 1px 0px rgba(0,0,0,0.1) !important;
+}

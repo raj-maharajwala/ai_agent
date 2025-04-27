@@ -1,0 +1,36 @@
+# Ensure vs_BuildTools.exe is intalled with CMake checked and System Path setup
+langchain_community
+tf-keras
+langchain_huggingface
+langchain_experimental
+langchain_ollama
+faiss-cpu
+torch
+tensorflow
+accelerate
+peft
+bitsandbytes
+setuptools
+wheel
+cmake
+transformers
+sentence_transformers
+pyprojroot
+huggingface_hub
+tensorflow
+# llama-cpp-python -> install as per /docs/install_c_compiler_llama_cpp.txt
+# llamacpp
+pandas
+numpy
+tabulate
+pymysql
+langchain_groq
+langchain==0.2.14
+langchain_openai
+plotly==5.24.0
+nbformat
+seaborn
+streamlit
+langgraph
+IPython
+openpyxl

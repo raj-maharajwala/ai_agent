@@ -1,0 +1,10 @@
+/* static/style.css */
+body {
+    background-color: #f0f2f6;
+}
+
+h1 {
+    color: #3a3a3a;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+}

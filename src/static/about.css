@@ -1,0 +1,17 @@
+.about-section-divider {
+    height: 1.5px;
+    background: linear-gradient(90deg, rgba(139, 148, 148, 0.01) 0%, rgba(139, 148, 148, 0.1) 50%, rgba(139, 148, 148, 0.01) 100%);
+    margin: 15px 0;
+}
+
+.about-footer {
+    font-size: 0.9rem;
+    color: #666 important!;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.about-footer p {
+    margin-bottom: 8px;
+    color: #666 important!;
+}

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+html, body, [class*="css"], h5, h4, h3, p, span, .sidebar-text, .sidebar-subtext, .logo-text, code.st-emotion-cache-1drfmnm, .st-bm, .st-ak, .st-bn, .st-bo, .st-bp, .st-ar, .st-bq, .st-br, .st-bs, .st-emotion-cache-sy3zga, .stCode, 
+.stTextInput, .stTextArea, .stButton, .stSelectbox, 
+.stMultiSelect, .stNumber, .stMarkdownContainer {
+    font-family: 'Lato', monospace !important;
+    padding: -0.3px 0px !important; 
+    color: #ffffff;
+}
+
+.stSidebar {
+    background-color: #202222;
+}

@@ -1,0 +1,13 @@
+# install SQLite version 3.47.0 on a Linux VM:
+sudo apt update
+sudo apt install build-essential wget
+wget https://www.sqlite.org/2024/sqlite-autoconf-3470000.tar.gz
+tar xvf sqlite-autoconf-3470000.tar.gz
+cd sqlite-autoconf-3470000
+./configure
+make
+sudo make install
+sqlite3 --version
+cd ..
+rm -rf sqlite-autoconf-3470000
+rm sqlite-autoconf-3470000.tar.gz

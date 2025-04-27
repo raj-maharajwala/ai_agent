@@ -1,0 +1,11 @@
+sudo apt-get install build-essential g++ clang
+sudo apt-get update
+sudo apt-get install build-essential cmake python3-dev
+
+# sudo find / -name nvcc
+
+export CUDACXX=/usr/local/cuda-12.5/bin/nvcc
+export PATH=/usr/local/cuda-12.5/bin:$PATH
+CMAKE_ARGS="-DGGML_CUDA=on -DCUDA_PATH=/usr/local/cuda-12.5 -DCUDAToolkit_ROOT=/usr/local/cuda-12.5 -DCUDAToolkit_INCLUDE_DIR=/usr/local/cuda-12.5/include -DCUDAToolkit_LIBRARY_DIR=/usr/local/cuda-12.5/lib64" FORCE_CMAKE=1 pip install llama-cpp-python==0.3.7 --no-cache-dir --force-reinstall
+
+# -DCMAKE_CUDA_ARCHITECTURES=80

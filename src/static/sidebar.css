@@ -1,0 +1,202 @@
+@keyframes rotate-y {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes rotate-z {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+.rotating-logo {
+    width: 60px;    
+    height: 64px;
+    transform-style: preserve-3d;
+    z-index: 9999;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -60px 5px 0 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 12px;
+}
+
+.rotating-logo:hover {
+    animation: rotate-z 8s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05);
+}
+
+.sidebar-text {
+    color: #e0e0e0;
+    margin-left: -18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: clamp(1.4rem, 1.2vw + 0.8rem, 1.7rem);
+    font-weight: 700;
+    padding: 0.6em 0.8em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -68px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-overflow: ellipsis;
+    will-change: transform;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.02em;
+}
+
+section[data-testid="stSidebar"][aria-expanded="true"] {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 280px;
+    max-width: 320px;
+    background: #191a1a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-text:hover {
+    color: #16a085;
+    transform: translateX(3px);
+}
+
+.sidebar-subtext {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: #9ca3af;
+    font-size: calc(0.8em + 0.2vw);
+    margin: -15px 0 -30px 15px;
+    padding: 0.8rem;
+    width: calc(100% - 1rem);
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sidebar-subtext:hover {
+    color: #16a085;
+    transform: translateX(3px);
+}
+
+div[data-testid="stSidebarUserContent"] {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+}
+
+section[data-testid="stSidebar"] div.stButton {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    padding: 1rem;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(32,34,34,0.95) 0%, rgba(32,34,34,0) 100%);
+}
+
+section[data-testid="stSidebar"] div.stButton > button {
+    width: 110px;
+    bottom: 15px;
+    left: auto;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: #2a2d2d;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+section[data-testid="stSidebar"] div.stButton > button:hover {
+    transform: translateY(-2px);
+    background: #323535;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: #94a3b8;
+    z-index: 999;
+    padding: 1rem;
+    font-size: 0.9em;
+}
+
+.sidebar-divider {
+    margin: 5px 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.02) 100%);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 15px 0 0 0;
+    padding: 0.5rem;
+    background: transparent;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: transparent;
+}
+
+.streamlit-expanderHeader {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #e0e0e0;
+    transition: color 0.2s ease;
+}
+
+.streamlit-expanderHeader:hover {
+    color: #16a085;
+}
+
+.streamlit-expander {
+    width: 100% !important;
+    margin-left: 50px !important;
+    min-width: 200px;
+    max-width: 280px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 0.5rem 0;
+}
+
+.stSelectbox > div > div {
+    background-color: rgba(42, 50, 49, 0.7) !important;
+}
+
+.stSelectbox [data-baseweb="select"] > div {
+    margin-left: 10px !important;
+    margin-top: -10px !important;
+    min-width: 200px;
+    max-width: 280px;
+    border: 1px solid dark-grey !important;
+    border-right: 5px solid #2f747a !important;
+}
+
+@media screen and (max-width: 768px) {
+    [data-testid="stSidebar"][aria-expanded="true"] {
+        min-width: 85vw;
+        max-width: 85vw;
+    }
+
+    .sidebar-text {
+        font-size: calc(1.2em + 0.5vw);
+    }
+
+    .logo-container {
+        margin: 10px 0 0 0;
+        margin-top: 100px;
+    }
+}
+
+
+

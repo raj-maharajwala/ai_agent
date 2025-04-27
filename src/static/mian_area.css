@@ -1,0 +1,301 @@
+/* main_area.css */
+
+/* Global font and styling improvements */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1A1A1A;
+}
+
+/* Main container styling */
+.main .block-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Perplexity-inspired clean chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+/* Message styling with Perplexity-inspired clean look */
+.message {
+    padding: 1.25rem;
+    margin: 0.75rem 0;
+    border-radius: 12px;
+    width: 100%;
+    line-height: 1.6;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    background-color: #2a2d2d;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+    background-color: #292c2c;
+    color: #e0e0e0;
+}
+
+.ai-message {
+    background-color: #2a2d2d;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Perplexity-inspired empty chat state */
+.empty-chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    text-align: center;
+    margin-top: -4em;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #9ca1af !important;
+    margin-top: -2.5em;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-subtext {
+    font-size: 1.1rem;
+    color: #8c9494 !important;
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+/* Custom styling for inline code */
+.welcome-subtext code {
+    background-color: #323535;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #e83e8c;
+    font-weight: 500;
+}
+
+/* Enhanced chat input container */
+.chat-input-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+/* Compact feature cards with pastel colors */
+.feature-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: #2a2d2d;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Enhanced background colors for feature cards */
+.feature-card:nth-child(1) {
+    background: #2a2d2d;
+    border-bottom: 4px solid #2f747a;
+    margin-bottom: 1rem;
+}
+
+.feature-card:nth-child(2) {
+    background: #2a2d2d;
+    border-bottom: 4px solid #2f747a;
+    margin-bottom: 1rem;
+}
+
+.feature-card:nth-child(3) {
+    background: #2a2d2d;
+    border-bottom: 4px solid #2f747a;
+    margin-bottom: 1rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Add subtle card decoration */
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 0 60px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    background: #191a1a;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.feature-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #e0e0e0ea;
+}
+
+.feature-description {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+/* Enhanced example section */
+.examples-container {
+    background-color: #2a2d2d;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Perplexity-inspired heading styles */
+.section-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .chat-input-container, .empty-chat-container, .chat-container, .examples-container {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+    
+    .feature-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Perplexity-inspired footer */
+.app-footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-top: 0.75rem;
+    color: #ad9b8d;
+    font-size: 0.875rem;
+}
+
+.footer-link {
+    color: #ad9b8d;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #22808e;
+    text-decoration: underline;
+}
+
+/* WELCOME TEXT */
+
+.welcome-about {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-top: -1.5em;
+    margin-bottom: -5em;
+}
+
+.logo-container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto -10px auto;
+}
+
+.image-main {
+    width: 96%;  /* Reduced size to fit inline */
+    height: 96%;  /* Reduced size to fit inline */
+    transform-style: preserve-3d;
+    z-index: 9999;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 2%;
+    margin-bottom: -5%;
+    margin-right: -10px;
+}
+
+/* This rule targets the sidebar when its aria-expanded attribute is false */
+[data-testid="stSidebar"][aria-expanded="false"] .note-ai {
+    display: none;
+}

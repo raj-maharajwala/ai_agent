@@ -1,0 +1,181 @@
+/* main_chat_input.css */
+
+/* Chat input textarea hover/focus styles */
+.stChatInput textarea, div[data-testid="stChatInput"] textarea {
+    caret-color: #e0e0e0 !important;
+}
+
+
+/* Style the main chat input container */
+.stChatInput, div[data-testid="stChatInput"] {
+    height: auto !important;
+    min-height: 150px !important;
+    padding: 15px !important;
+    border-radius: 36px !important;
+    background-color: #292c2c !important;
+    border: 1px solid rgba(255, 255, 255, 0.072) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    margin-top: -50px;
+}
+
+
+/* Style the inner container - new in 1.42.2 */
+.st-emotion-cache-10nh6ap, div[data-testid="stChatInput"] > div {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    width: 95% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 150px !important;
+    position: relative !important;
+}
+
+.st-emotion-cache-nbth8s {
+    position: absolute !important;
+    left: 10px !important;
+    bottom: 20px !important;
+    z-index: 10 !important;
+    order: 2 !important;
+}
+
+/* Reposition the file upload button container */
+[data-testid="stChatInputFileUploadButton"] {
+    border-radius: 50% !important;
+    padding-left: 9px !important;
+    padding-bottom: 1px !important;
+    align-self: right !important;
+    /* margin-left: 679px !important; */
+    background-color: transparent !important;
+    box-shadow: -0.5px 1px 0px rgba(0,0,0,0.1) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 40px !important;
+    height: 40px !important;
+    left: -7px !important;
+    bottom: -20px !important;
+    position: absolute !important;
+    z-index: 10 !important;
+}
+
+[data-testid="stChatInputFileUploadButton"] svg {
+    fill: #8c9494 !important;
+}
+
+[data-testid="stChatInputFileUploadButton"]:hover {
+    background-color: #c4d4d4 !important;
+    color: #94bcbc !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    animation: pulse 0.6s ease-out !important;
+}
+
+[data-testid="stChatInputFileUploadButton"]:hover, [data-testid="stChatInputFileUploadButton"]:hover svg {
+    fill: #212121 !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Reposition line next 2 file upload button */ 
+.st-emotion-cache-g39xc6  {
+
+    margin-left: 29px !important;
+    margin-right: 0px !important;
+    border: none !important;
+    position: absolute !important;
+    bottom: 5px !important;
+    background-color: transparent !important;
+    z-index: 10 !important;
+    order: 2 !important;
+    min-height: 140px !important;
+}
+
+/* Style the textarea container */
+.stChatInput [data-baseweb="textarea"] {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    width: 95% !important;
+    max-width: 100% !important;
+    order: 1 !important;
+}
+
+/* Style the actual textarea element */
+[data-testid="stChatInputTextArea"] {
+    min-height: 145px !important;
+    max-height: 280px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 12px !important;
+    padding-left: 35px !important; /* Make room for the attachment button */
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    box-shadow: none !important;
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+[data-testid="stChatInputTextArea"]::placeholder {
+    color: rgba(224, 225, 225, 0.856) !important;
+}
+
+/* Style the base input container */
+[data-baseweb="base-input"] {
+    border: none !important;
+    width: 100% !important;
+    max-width: 96% !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    min-height: 110px !important;
+    max-height: 280px !important;
+}
+
+/* Style the button container - new in 1.42.2 */
+.st-emotion-cache-sey4o0 {
+    align-self: flex-end !important;
+    z-index: 5 !important;
+    
+}
+
+/* Adjust the send button position */
+[data-testid="stChatInputSubmitButton"] {
+    border-radius: 50% !important;
+    align-self: flex-end !important;
+    margin-left: 10px !important;
+    color: #e0e0e0 !important;
+    background-color: #2f747a !important;
+    margin-bottom: 1px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+[data-testid="stChatInputSubmitButton"]:hover {
+    background-color: #68abac !important;
+    color: #212121 !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    animation: pulse 0.6s ease-out !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
